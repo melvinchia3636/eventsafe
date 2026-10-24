@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { db } from '../db/index.js';
-import { TEST_ROW_ID, test } from '../db/schema.js';
+import { db } from '../../db/index.js';
+import { TEST_ROW_ID, test } from '../../db/schema.js';
 
 const rowColumns = { id: test.id, checked: test.checked };
 

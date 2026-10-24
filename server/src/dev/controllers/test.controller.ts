@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Patch } from '@nestjs/common';
-import { SetCheckedDto } from './dto/set-checked.dto.js';
-import { TestService } from './test.service.js';
+import { SetCheckedDto } from '../dto/set-checked.dto.js';
+import { TestService } from '../services/test.service.js';
 
 @Controller('test')
 export class TestController {
