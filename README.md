@@ -9,25 +9,22 @@ Monorepo for the EventSafe app.
 
 ## Getting started
 
-Install dependencies in each package:
+Install dependencies from the repo root:
 
 ```bash
-cd client && bun install
-cd server && bun install
+bun install
 ```
 
 Run the client:
 
 ```bash
-cd client
-bun run dev
+bun run dev:client
 ```
 
 Run the server:
 
 ```bash
-cd server
-bun run start:dev
+bun run dev:server
 ```
 
 The client dev server starts on http://localhost:5173 and the API on http://localhost:3000.
