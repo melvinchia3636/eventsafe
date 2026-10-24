@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { db } from '../db/index.js';
 import { TEST_ROW_ID, test } from '../db/schema.js';
 
@@ -13,11 +13,7 @@ export class TestService {
     return row ?? null;
   }
 
-  async setChecked(checked: unknown) {
-    if (typeof checked !== 'boolean') {
-      throw new BadRequestException('checked must be a boolean');
-    }
-
+  async setChecked(checked: boolean) {
     const [row] = await db
       .insert(test)
       .values({ id: TEST_ROW_ID, checked })
